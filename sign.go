@@ -54,7 +54,7 @@ func NewSigningContext(signer crypto.Signer, certs [][]byte) (*SigningContext, e
 		Hash:          crypto.SHA256,
 		IdAttribute:   DefaultIdAttr,
 		Prefix:        DefaultPrefix,
-		Canonicalizer: MakeC14N11Canonicalizer(),
+		Canonicalizer: MakeC14N10RecCanonicalizer(),
 
 		signer: signer,
 		certs:  certs,
