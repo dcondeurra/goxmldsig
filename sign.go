@@ -51,7 +51,7 @@ func NewSigningContext(signer crypto.Signer, certs [][]byte) (*SigningContext, e
 		return nil, errors.New("signer cannot be nil for NewSigningContext")
 	}
 	ctx := &SigningContext{
-		Hash:          crypto.SHA256,
+		Hash:          crypto.SHA1,
 		IdAttribute:   DefaultIdAttr,
 		Prefix:        DefaultPrefix,
 		Canonicalizer: MakeC14N10RecCanonicalizer(),
